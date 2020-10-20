@@ -15,9 +15,20 @@ export const ReptileProvider = (props) => {
             .then(res => res.json())
     }
 
+    const editReptile = reptile => {
+        return fetch(`http://localhost:8088/reptiles/${reptile.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(reptile)
+        })
+            .then(getReptiles)
+    }
+    
     return (
         <ReptileContext.Provider value={{
-            reptiles, getReptiles, getReptileById
+            reptiles, getReptiles, getReptileById, editReptile
         }}>
             {props.children}
         </ReptileContext.Provider>
