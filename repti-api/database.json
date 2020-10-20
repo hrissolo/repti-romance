@@ -6,7 +6,7 @@
       "email": "papa@test.com",
       "species": "Bearded Dragon",
       "lookingFor": "Friends",
-      "photo": "",
+      "photo": "./images/img1.jpg",
       "bio": "a handsome beardie"
     }
   ],

@@ -6,7 +6,7 @@ import { Register } from "./components/auth/Register";
 import { NavBar } from "./components/nav/NavBar"
 import "./App.css"
 
-export const App = () => (
+export const ReptiRomance = () => (
   <>
   <Route
     render={() => {

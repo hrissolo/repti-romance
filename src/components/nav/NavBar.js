@@ -8,7 +8,7 @@ export const NavBar = props => {
     <ul className="navbar">
       <li className="navbar__item active">
         <Link className="navbar__link" to="/">
-          HalloTWEEN Town
+          Repti-Romance
         </Link>
       </li>
       <li className="navbar__item">
@@ -17,25 +17,16 @@ export const NavBar = props => {
         </Link>
       </li>
       <li className="navbar__item">
-        <Link className="navbar__link" to="/articles">
-          Articles
+        <Link className="navbar__link" to="/myProfile">
+          My Profile
         </Link>
       </li>
       <li className="navbar__item">
-        <Link className="navbar__link" to="/tasks">
-          Tasks
+        <Link className="navbar__link" to="/login">
+          Log out 
         </Link>
       </li>
-      <li className="navbar__item">
-        <Link className="navbar__link" to="/events">
-          Events
-        </Link>
-      </li>
-      <li className="navbar__item">
-        <Link className="navbar__link" to="/friends">
-          Friends
-        </Link>
-      </li>
+      
     </ul>
   );
 };
