@@ -1,23 +1,22 @@
 {
-    "reptiles": [
-        {
-            "id": 1,
-            "username": "Papaya", 
-            "email": "papa@test.com",
-            "species": "Bearded Dragon", 
-            "lookingFor": "Friends", 
-            "photo": "",
-            "bio": "a handsome beardie"
-        } 
-    ],
-
-    "messages": [
-        {
-            "id": 1,
-            "userId": 1,
-            "matchId": 2, 
-            "date": "10/19/2020, 11:43 am",
-            "message": "Hey qt"
-        }
-    ]
+  "reptiles": [
+    {
+      "id": 1,
+      "username": "Papaya",
+      "email": "papa@test.com",
+      "species": "Bearded Dragon",
+      "lookingFor": "Friends",
+      "photo": "./src/images/img1.jpg",
+      "bio": "a handsome beardie"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "matchId": 2,
+      "date": "10/19/2020, 11:43 am",
+      "message": "Hey qt"
+    }
+  ]
 }

@@ -8,3 +8,5 @@ This project was bootstrapped with [Create React App]
 ![Repti-wireframe2](/readme/repti-wireframe2.png)
 
 ![Repti-wireframe3](/readme/repti-wireframe3.png)
+
+![Repti-outline](/readme/repti-outline.png)
