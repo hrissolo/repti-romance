@@ -31,7 +31,11 @@ export const Register = props => {
           },
           body: JSON.stringify({
             email: email.current.value,
-            username: `${username.current.value}`
+            username: `${username.current.value}`,
+            species: species.current.value,
+            lookingFor: lookingFor.current.value,
+            photo: photo.current.value,
+            bio: bio.current.value, 
           })
         })
           .then(_ => _.json())
