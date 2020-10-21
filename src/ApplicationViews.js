@@ -8,16 +8,20 @@ import { MessageProvider } from "./components/message/MessageProvider"
 import { MessageCard } from "./components/message/MessageCard"
 import { MessageForm } from './components/message/MessageForm'
 import { ReptileCard } from "./components/reptile/ReptileCard";
+import { MatchContext, MatchProvider } from "./components/matches/MatchProvider"
 
 export const ApplicationViews = props => {
     return (
       <>
+      
         <ReptileProvider>
-            <Route exact path="/">
-                <ReptileList />
-            </Route>
+            <MatchProvider>
+                <Route exact path="/">
+                    <ReptileList />
+                </Route>
+            </MatchProvider>
         </ReptileProvider>
-
+       
         <ReptileProvider>
             <Route exact path="/reptiles/detail/:reptileId(\d+)">
                 <ReptileDetail />
@@ -35,5 +39,7 @@ export const ApplicationViews = props => {
                 <ReptileDetail />
             </Route>
         </ReptileProvider>
+
+
     </>
 )}  

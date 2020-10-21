@@ -8,20 +8,42 @@
       "lookingFor": "Friends",
       "photo": "https://images.unsplash.com/photo-1597146936637-369228a2c660?ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60",
       "bio": "a handsome beardie"
+    },
+    {
+      "email": "hrissolo@gmail.com",
+      "username": "lilslothy",
+      "species": "fdsf",
+      "lookingFor": "Friends",
+      "photo": "https://images.unsplash.com/photo-1550877761-2f3c268d2a04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+      "bio": "A friendly cutie!",
+      "id": 2
     }
   ],
   "messages": [
     {
       "id": 1,
       "reptileId": 1,
-      "matchId": 2,
+      "matchAddedId": 2,
       "date": "10/19/2020, 11:43 am",
       "message": "Hey qt"
     },
     {
       "message": "Sexy can I ",
       "date": "10/20/2020, 03:00:03 PM",
+      "matchAddedId": 2,
       "reptileId": 1,
+      "id": 2
+    }
+  ],
+  "matches": [
+    {
+      "reptileId": 2,
+      "matchAddedId": 1,
+      "id": 1
+    },
+    {
+      "reptileId": 1,
+      "matchAddedId": 2,
       "id": 2
     }
   ]
