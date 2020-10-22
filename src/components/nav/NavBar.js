@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "./NavBar.css";
 
 
 export const NavBar = props => {
   const lizard_user = localStorage.getItem("lizard_user")
-  const clear = localStorage.clear();
 
   return (
     <ul className="navbar">
@@ -25,7 +24,7 @@ export const NavBar = props => {
         </Link>
       </li>
       <li className="navbar__item">
-        <Link className="navbar__link" to={`/${clear}`}>
+        <Link onClick={()=>{localStorage.clear()}} className="navbar__link" to="/logout">
           Log out 
         </Link>
       </li>
