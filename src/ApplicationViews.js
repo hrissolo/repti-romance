@@ -1,6 +1,5 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { Home } from "./Home"
 import { ReptileProvider } from "./components/reptile/ReptileProvider"
 import { ReptileList } from "./components/reptile/ReptileList"
 import { ReptileDetail } from "./components/reptile/ReptileDetail"
@@ -8,7 +7,7 @@ import { MessageProvider } from "./components/message/MessageProvider"
 import { MessageCard } from "./components/message/MessageCard"
 import { MessageForm } from './components/message/MessageForm'
 import { ReptileCard } from "./components/reptile/ReptileCard";
-import { MatchContext, MatchProvider } from "./components/matches/MatchProvider"
+import { MatchProvider } from "./components/matches/MatchProvider"
 
 export const ApplicationViews = props => {
     return (
@@ -40,6 +39,21 @@ export const ApplicationViews = props => {
             </Route>
         </ReptileProvider>
 
+        <ReptileProvider>
+            <MessageProvider>
+                <Route exact path="/messages/edit/:messageId(\d+)">
+                    <MessageForm />
+                </Route>
+            </MessageProvider>
+        </ReptileProvider>
+
+        <ReptileProvider>
+            <MessageProvider>
+                <Route exact path="/messages/detail/:messageId(\d+)">
+                    <MessageForm />
+                </Route>
+            </MessageProvider>
+        </ReptileProvider>
 
     </>
 )}  

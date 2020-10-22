@@ -47,6 +47,16 @@
       "reptileId": 1,
       "matchAddedId": 2,
       "id": 2
+    },
+    {
+      "reptileId": 1,
+      "matchAddedId": 3,
+      "id": 3
+    },
+    {
+      "reptileId": 3,
+      "matchAddedId": 1,
+      "id": 4
     }
   ]
 }

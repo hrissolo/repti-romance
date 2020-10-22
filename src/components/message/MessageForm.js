@@ -34,14 +34,14 @@ export const MessageForm = (props) => {
     }, [])
 
     const constructMessageObject = () => {
-        const userId = parseInt(localStorage.getItem("lizard_user"))
+        const reptileId = parseInt(localStorage.getItem("lizard_user"))
         setIsLoading(true);
         if (messageId) {
             updateMessage({
                 id: message.id,
                 message: message.message,
                 date: message.date,
-                userId: message.userId
+                reptileId: message.reptileId
             })
                 .then(() => history.push(`/messages/detail/${messageId}`))
         } else {
@@ -55,7 +55,7 @@ export const MessageForm = (props) => {
                     minute: '2-digit', 
                     second: '2-digit'})
                     .format(Date.now()),
-                userId: userId
+                reptileId: reptileId
             })
                 .then(() => history.push("/messages"))
                 .then(() => getMessages())

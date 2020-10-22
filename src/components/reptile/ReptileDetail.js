@@ -27,7 +27,7 @@ export const ReptileDetail = () => {
                     <button onClick={() => {
                         editReptile(reptiles.id)
                         .then(() => {
-                            history.push(`/reptiles/edit/${reptiles.id}`)
+                            history.push(`/reptiles/edit/${reptileId}`)
                         })
                     }}><Icon name="edit" />
                     </button>
