@@ -10,13 +10,13 @@
       "bio": "a handsome beardie"
     },
     {
-      "email": "hrissolo@gmail.com",
-      "username": "lilslothy",
-      "species": "fdsf",
-      "lookingFor": "Friends",
+      "id": 2,
+      "username": "2lilslothy",
+      "bio": "sweet chicken wing",
+      "lookingFor": ";-) ???",
+      "species": "chameleon ",
       "photo": "https://images.unsplash.com/photo-1550877761-2f3c268d2a04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-      "bio": "A friendly cutie!",
-      "id": 2
+      "email": "lilslothy@gmail.com"
     },
     {
       "email": "cuties@test.com",
@@ -30,11 +30,16 @@
   ],
   "messages": [
     {
-      "id": 1,
+      "message": "fjdkfjlsd",
+      "date": "10/22/2020, 11:27:34 AM",
       "reptileId": 1,
-      "matchAddedId": 2,
-      "date": "10/19/2020, 11:43 am",
-      "message": "Hey qt"
+      "id": 1
+    },
+    {
+      "message": "fjdkfjlsd",
+      "date": "10/22/2020, 11:27:34 AM",
+      "reptileId": 2,
+      "id": 2
     }
   ],
   "matches": [

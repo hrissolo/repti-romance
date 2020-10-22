@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import { Card, Icon, Image } from 'semantic-ui-react'
 import { MatchContext } from "../matches/MatchProvider"
 import { ReptileContext } from "./ReptileProvider"
+import Magnifier from "react-magnifier";
+ 
 
 
 export const ReptileCard = ( {reptiles} ) => {
@@ -34,13 +36,13 @@ export const ReptileCard = ( {reptiles} ) => {
         </Card.Header>
         
             <Link to={`/reptiles/detail/${reptiles.id}`}>  
-                <Image src={ reptiles.photo } alt="Me!"></Image>
+                <Magnifier src={ reptiles.photo } alt="Me!"></Magnifier>
             </Link>
         <Card.Content>
         <div className="reptile__species">{ reptiles.species }</div>
         </Card.Content>
         </Card>
-
+        
         <section>
             <button onClick={
                 () => {

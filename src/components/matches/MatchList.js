@@ -3,7 +3,7 @@ import { MatchContext } from "./MatchProvider"
 import { MatchCard } from "./MatchCard"
 import { useHistory } from "react-router-dom"
 
-export const FriendList = () => {
+export const MatchList = () => {
   // This state changes when `getFriends()` is invoked below
   const { matches, getMatches } = useContext(MatchContext)
 	
@@ -11,10 +11,19 @@ export const FriendList = () => {
   useEffect(() => {
 	  getMatches()
   }, [])
+  
+  const findMatches = () => {
+    if (matches) {
+      matches.map(match => {
+        return <MatchCard key={match.id} matches={match} />
+      })
+    }
+  }
 
   const history = useHistory()
   //returns the user's list of friends
   return (
+    
     <div className="friends">
       <div className="friendsTop">
         <h2>Your Matches</h2>
@@ -22,11 +31,8 @@ export const FriendList = () => {
           Add New Match
         </button>
       </div>
-      {
-        matches.map(match => {
-          return <MatchCard key={match.id} matches={match} />
-        })
-      }
+      
+      {findMatches()}
     </div>
   )
 }
