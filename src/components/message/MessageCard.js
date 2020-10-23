@@ -1,8 +1,11 @@
 import React, { useContext, useEffect, useState } from "react"
 import { MessageContext } from "./MessageProvider"
+import {ReptileContext} from "../reptile/ReptileProvider"
 import { useHistory, useParams } from 'react-router-dom';
 import { Button, Container, Icon } from "semantic-ui-react"
 import "./Message.css"
+
+//each individual message
 
 export const MessageCard = ({ message }) => {
     const history = useHistory()

@@ -11,6 +11,7 @@
     "react-font-size-changer": "^0.2.0",
     "react-magnifier": "^3.0.4",
     "react-native-text": "^1.0.8",
+    "react-notify-toast": "^0.5.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.4",
     "semantic-ui-css": "^2.4.1",

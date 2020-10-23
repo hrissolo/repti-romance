@@ -15,7 +15,7 @@ export const MessageProvider = (props) => {
     }
 
     const addMessage = messageObj => {
-        return fetch("http://localhost:8088/messages", {
+        return fetch(`http://localhost:8088/messages/detail/${messageObj}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
