@@ -14,9 +14,9 @@ export const ReptileList = () => {
 		
     }, [])
 
-    const exceptMe = () => {
-      reptiles.filter(repti => repti.currentValue(lizard_user))
-    }
+    // const exceptMe = () => {
+    //   reptiles.filter(repti => repti.currentValue(lizard_user))
+    // }
 
     return (
       <>

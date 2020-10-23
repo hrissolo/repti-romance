@@ -6,33 +6,32 @@ import { useHistory } from "react-router-dom"
 export const MatchList = () => {
   // This state changes when `getFriends()` is invoked below
   const { matches, getMatches } = useContext(MatchContext)
-	
-	//useEffect - reach out to the world for something
+  const history = useHistory()
+
+	console.log(matches)
   useEffect(() => {
 	  getMatches()
   }, [])
   
-  const findMatches = () => {
-    if (matches) {
-      matches.map(match => {
-        return <MatchCard key={match.id} matches={match} />
-      })
-    }
-  }
+  // const findMatches = () => {
+  //   if (matches) {
+  //     matches.map(match => {
+  //       return <MatchCard key={match.id} matches={match} />
+  //     })
+  //   }
+  // }
 
-  const history = useHistory()
-  //returns the user's list of friends
   return (
-    
-    <div className="friends">
-      <div className="friendsTop">
-        <h2>Your Matches</h2>
-        <button onClick={()=> {history.push("matches/add")}}>
-          Add New Match
-        </button>
-      </div>
+    <>
       
-      {findMatches()}
+      <h2>Your Matches</h2>
+      <div>
+      {
+      matches.map(match => {
+        return <MatchCard key={match.id} match={match} />
+      })}
     </div>
+    </>
   )
 }
+

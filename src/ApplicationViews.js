@@ -12,7 +12,6 @@ import { MatchList } from "./components/matches/MatchList"
 import { ReptileForm } from "./components/reptile/ReptileForm"
 
 export const ApplicationViews = props => {
-    const lizard_user = localStorage.getItem("lizard_user")
     
 
     return (
@@ -26,7 +25,6 @@ export const ApplicationViews = props => {
             </MatchProvider>
         </ReptileProvider>
        
-       
         <ReptileProvider>
             <MatchProvider>
                 <Route exact path="/reptiles/detail/:reptileId(\d+)">
@@ -34,8 +32,6 @@ export const ApplicationViews = props => {
                 </Route>
             </MatchProvider>
         </ReptileProvider>
-
-
 
         <ReptileProvider>
             <Route exact path="/login">
@@ -49,13 +45,13 @@ export const ApplicationViews = props => {
             </Route>
         </ReptileProvider>
 
+        <ReptileProvider>
         <MatchProvider>
-        <MessageProvider>
-            <Route exact path="/messages">
+            <Route exact path="/matches">
                 <MatchList />
             </Route>
-        </MessageProvider>
         </MatchProvider>
+        </ReptileProvider>
 
         <ReptileProvider>
         <MessageProvider>
@@ -66,7 +62,6 @@ export const ApplicationViews = props => {
             </MatchProvider>
         </MessageProvider>
         </ReptileProvider>
-
 
         <ReptileProvider>
             <MessageProvider>

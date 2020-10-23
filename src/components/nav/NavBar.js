@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 
@@ -14,8 +14,8 @@ export const NavBar = props => {
         </Link>
       </li>
       <li className="navbar__item">
-        <Link className="navbar__link" to="/messages">
-          Messages
+        <Link className="navbar__link" to="/matches">
+          My Matches
         </Link>
       </li>
       <li className="navbar__item">
