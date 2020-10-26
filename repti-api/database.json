@@ -33,19 +33,29 @@
       "message": "fjdkfjlsd",
       "date": "10/22/2020, 11:27:34 AM",
       "reptileId": 1,
+      "sendeeId": 2,
       "id": 1
     },
     {
       "message": "fjdkfjlsd",
       "date": "10/22/2020, 11:27:34 AM",
       "reptileId": 2,
+      "sendeeId": 3,
       "id": 2
     },
     {
       "message": "fjdkfjlsd",
       "date": "10/03/2020, 11:27:34 AM",
-      "reptileId": 3,
+      "reptileId": 2,
+      "sendeeId": 1,
       "id": 3
+    },
+    {
+      "message": "another one",
+      "date": "10/03/2020, 11:27:34 AM",
+      "reptileId": 2,
+      "sendeeId": 1,
+      "id": 4
     }
   ],
   "matches": [

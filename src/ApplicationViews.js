@@ -65,18 +65,18 @@ export const ApplicationViews = props => {
         </ReptileProvider> */}
 
 
-        {/* <ReptileProvider>
+        <ReptileProvider>
             <MessageProvider>
                 <Route exact path="/messages/detail/:messageId(\d+)">
                     <MessageForm />
                 </Route>
             </MessageProvider>
-        </ReptileProvider> */}
+        </ReptileProvider>
 
         <ReptileProvider>
             <MessageProvider>
                 <MatchProvider>
-                    <Route exact path="/matches/:reptileId(\d+)+:matchAddedId(\d+)">
+                    <Route exact path="/messages/:reptileId(\d+)">
                         <MessageList />
                     </Route>
                 </MatchProvider>

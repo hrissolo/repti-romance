@@ -17,10 +17,8 @@ export const MatchCard = ({ match }) => {
             
             { match.reptile.username }</h3>
             
-    <button onClick={()=> {history.push(`/matches/${match.reptileId}+${match.matchAddedId}`)}}>
+    <button onClick={()=> {history.push(`/matches/${match.reptileId}`) }}>
     Click match to view messages
     </button> </div>
     </section>
 )}
-
-

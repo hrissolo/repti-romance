@@ -14,14 +14,12 @@ export const ReptileList = () => {
 		
     }, [])
 
-    // const exceptMe = () => {
-    //   reptiles.filter(repti => repti.currentValue(lizard_user))
-    // }
 
     return (
       <>
           <h1>Reptiles</h1>
         <div>
+          
       {
       reptiles.map(reptiles => {
         return <ReptileCard key={reptiles.id} reptiles={reptiles} />
