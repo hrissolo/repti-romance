@@ -2,21 +2,21 @@
   "reptiles": [
     {
       "id": 1,
-      "username": "Papaya",
-      "email": "papa@test.com",
-      "species": "Bearded Dragon",
+      "username": "Papayapapapapa",
+      "bio": "a handsome beardie",
       "lookingFor": "Friends",
+      "species": "Bearded Dragon",
       "photo": "https://images.unsplash.com/photo-1597146936637-369228a2c660?ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60",
-      "bio": "a handsome beardie"
+      "email": "papa@test.com"
     },
     {
-      "email": "hrissolo@gmail.com",
-      "username": "lilslothy",
-      "species": "fdsf",
-      "lookingFor": "Friends",
+      "id": 2,
+      "username": "222222lilslothiiiiiii",
+      "bio": "sweet c",
+      "lookingFor": ";-) ???",
+      "species": "cutie chameleon ",
       "photo": "https://images.unsplash.com/photo-1550877761-2f3c268d2a04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-      "bio": "A friendly cutie!",
-      "id": 2
+      "email": "lilslothy@gmail.com"
     },
     {
       "email": "cuties@test.com",
@@ -30,11 +30,53 @@
   ],
   "messages": [
     {
-      "id": 1,
+      "message": "fjdkfjlsd",
+      "date": "10/22/2020, 11:27:34 AM",
       "reptileId": 1,
-      "matchAddedId": 2,
-      "date": "10/19/2020, 11:43 am",
-      "message": "Hey qt"
+      "sendeeId": 2,
+      "id": 1
+    },
+    {
+      "message": "fjdkfjlsd",
+      "date": "10/22/2020, 11:27:34 AM",
+      "reptileId": 2,
+      "sendeeId": 3,
+      "id": 2
+    },
+    {
+      "message": "fjdkfjlsd",
+      "date": "10/03/2020, 11:27:34 AM",
+      "reptileId": 2,
+      "sendeeId": 1,
+      "id": 3
+    },
+    {
+      "message": "do it ",
+      "date": "10/27/2020, 09:25:31 AM",
+      "reptileId": 2,
+      "sendeeId": 1,
+      "id": 4
+    },
+    {
+      "message": "you there????",
+      "date": "10/27/2020, 09:26:46 AM",
+      "reptileId": 2,
+      "sendeeId": 1,
+      "id": 5
+    },
+    {
+      "message": "How about now? ",
+      "date": "10/27/2020, 09:27:01 AM",
+      "reptileId": 2,
+      "sendeeId": 1,
+      "id": 6
+    },
+    {
+      "message": "How about now? ",
+      "date": "10/27/2020, 09:28:22 AM",
+      "reptileId": 2,
+      "sendeeId": 3,
+      "id": 7
     }
   ],
   "matches": [
@@ -47,6 +89,26 @@
       "reptileId": 1,
       "matchAddedId": 2,
       "id": 2
+    },
+    {
+      "reptileId": 1,
+      "matchAddedId": 3,
+      "id": 3
+    },
+    {
+      "reptileId": 3,
+      "matchAddedId": 1,
+      "id": 4
+    },
+    {
+      "reptileId": 2,
+      "matchAddedId": 3,
+      "id": 5
+    },
+    {
+      "reptileId": 3,
+      "matchAddedId": 2,
+      "id": 6
     }
   ]
 }

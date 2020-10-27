@@ -2,31 +2,29 @@ import React, { useContext, useEffect } from "react"
 import { MatchContext } from "./MatchProvider"
 import { MatchCard } from "./MatchCard"
 import { useHistory } from "react-router-dom"
+import "./Match.css"
 
-export const FriendList = () => {
-  // This state changes when `getFriends()` is invoked below
+export const MatchList = () => {
+  
   const { matches, getMatches } = useContext(MatchContext)
-	
-	//useEffect - reach out to the world for something
+  const history = useHistory()
+
   useEffect(() => {
 	  getMatches()
   }, [])
+  
 
-  const history = useHistory()
-  //returns the user's list of friends
   return (
-    <div className="friends">
-      <div className="friendsTop">
-        <h2>Your Matches</h2>
-        <button onClick={()=> {history.push("matches/add")}}>
-          Add New Match
-        </button>
-      </div>
+    <>
+      
+      <h2>Your Matches</h2>
+      <div>
       {
-        matches.map(match => {
-          return <MatchCard key={match.id} matches={match} />
-        })
-      }
+      matches.map(match => {
+        return <MatchCard key={match.id} match={match} />
+      })}
     </div>
+    </>
   )
 }
+

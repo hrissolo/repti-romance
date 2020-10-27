@@ -7,15 +7,29 @@ export const MessageContext = createContext()
 // This component establishes what data can be used.
 export const MessageProvider = (props) => {
     const [messages, setMessages] = useState([])
+    
 
-    const getMessages = () => {
-        return fetch("http://localhost:8088/messages?_expand=reptile")
+    const getMessages = (user1, user2) => {
+        let fullMsgArray = []
+        
+
+        return fetch(`http://localhost:8088/messages?reptileId=${user1}&sendeeId=${user2}&_expand=reptile`)
         .then(res => res.json())
-        .then(setMessages)
+        .then(parsedRes => {
+            
+            fullMsgArray.push(...parsedRes)})
+        .then(()=> fetch(`http://localhost:8088/messages?sendeeId=${user1}&reptileId=${user2}&_expand=reptile`))
+        .then(res2 => res2.json())
+        .then(parsed2Res => {
+	        fullMsgArray.push(...parsed2Res)
+        }).then(()=> {
+            
+	    setMessages(fullMsgArray)
+        })
     }
 
     const addMessage = messageObj => {
-        return fetch("http://localhost:8088/messages", {
+        return fetch(`http://localhost:8088/messages/detail/${messageObj}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

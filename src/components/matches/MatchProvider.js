@@ -7,7 +7,7 @@ export const MatchContext = createContext()
  */
 export const MatchProvider = (props) => {
     const [matches, setMatches] = useState([])
-    const reptileId = sessionStorage.getItem("lizard_user")
+    const reptileId = localStorage.getItem("lizard_user")
 
     //gets all friend relationships where friendUserId is the current logged in user
     //userId in the returned objects is expanded to show the friend(user)'s info
@@ -16,7 +16,6 @@ export const MatchProvider = (props) => {
             .then(res => res.json())
             .then(setMatches)
     }
-
     
     const addMatch = matchObj => {
         return fetch("http://localhost:8088/matches", {

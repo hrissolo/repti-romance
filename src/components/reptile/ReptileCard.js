@@ -1,8 +1,11 @@
 import React, { useContext } from "react"
 import { Link } from "react-router-dom"
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Icon, Image, Button } from 'semantic-ui-react'
 import { MatchContext } from "../matches/MatchProvider"
 import { ReptileContext } from "./ReptileProvider"
+import Magnifier from "react-magnifier";
+import Notifications, {notify} from 'react-notify-toast';
+
 
 
 export const ReptileCard = ( {reptiles} ) => {
@@ -34,21 +37,23 @@ export const ReptileCard = ( {reptiles} ) => {
         </Card.Header>
         
             <Link to={`/reptiles/detail/${reptiles.id}`}>  
-                <Image src={ reptiles.photo } alt="Me!"></Image>
+                <Magnifier src={ reptiles.photo } alt="Me!"></Magnifier>
             </Link>
         <Card.Content>
         <div className="reptile__species">{ reptiles.species }</div>
         </Card.Content>
-        </Card>
-
-        <section>
-            <button onClick={
+        
+        
+        <section><Button.Group fluid>
+            <Button negative>No Thnx</Button><Button.Or/><Button positive type="button" className="addMatchButton" onClick={
                 () => {
                     addMatchObj(reptiles.id)
                 }
-            }>YES</button>
+            }
+            >MATCH</Button>
+            </Button.Group>
         </section>
-
+        </Card>
     </section>
     )
 }

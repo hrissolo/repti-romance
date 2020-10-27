@@ -1,6 +1,5 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { Home } from "./Home"
 import { ReptileProvider } from "./components/reptile/ReptileProvider"
 import { ReptileList } from "./components/reptile/ReptileList"
 import { ReptileDetail } from "./components/reptile/ReptileDetail"
@@ -8,9 +7,14 @@ import { MessageProvider } from "./components/message/MessageProvider"
 import { MessageCard } from "./components/message/MessageCard"
 import { MessageForm } from './components/message/MessageForm'
 import { ReptileCard } from "./components/reptile/ReptileCard";
-import { MatchContext, MatchProvider } from "./components/matches/MatchProvider"
+import { MatchProvider } from "./components/matches/MatchProvider"
+import { MatchList } from "./components/matches/MatchList"
+import { ReptileForm } from "./components/reptile/ReptileForm"
+import {MessageList} from "./components/message/MessageList"
 
 export const ApplicationViews = props => {
+    
+
     return (
       <>
       
@@ -23,23 +27,60 @@ export const ApplicationViews = props => {
         </ReptileProvider>
        
         <ReptileProvider>
-            <Route exact path="/reptiles/detail/:reptileId(\d+)">
-                <ReptileDetail />
-            </Route>
+            <MatchProvider>
+                <Route exact path="/reptiles/detail/:reptileId(\d+)">
+                    <ReptileDetail />
+                </Route>
+            </MatchProvider>
         </ReptileProvider>
-
-        <MessageProvider>
-            <Route exact path="/messages">
-                <MessageForm />
-            </Route>
-        </MessageProvider>
 
         <ReptileProvider>
-            <Route exact path="/myProfile">
+            <Route exact path="/login">
                 <ReptileDetail />
             </Route>
         </ReptileProvider>
 
+        <ReptileProvider>
+            <Route exact path="/reptiles/edit/:reptileId(\d+)">
+                <ReptileForm />
+            </Route>
+        </ReptileProvider>
 
+        <ReptileProvider>
+        <MatchProvider>
+            <Route exact path="/matches">
+                <MatchList />
+            </Route>
+        </MatchProvider>
+        </ReptileProvider>
+
+        {/* <ReptileProvider>
+        <MessageProvider>
+            <MatchProvider>
+                <Route exact path="/messages/:messageId(/d+)">
+                    <MessageForm />
+                </Route>
+            </MatchProvider>
+        </MessageProvider>
+        </ReptileProvider> */}
+
+
+        <ReptileProvider>
+            <MessageProvider>
+                <Route exact path="/messages/detail/:messageId(\d+)">
+                    <MessageForm />
+                </Route>
+            </MessageProvider>
+        </ReptileProvider>
+
+        <ReptileProvider>
+            <MessageProvider>
+                <MatchProvider>
+                    <Route exact path="/messages/:reptileId(\d+)">
+                        <MessageList />
+                    </Route>
+                </MatchProvider>
+            </MessageProvider>
+        </ReptileProvider>
     </>
 )}  

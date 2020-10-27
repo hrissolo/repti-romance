@@ -1,0 +1,18 @@
+
+.matchCard {
+    width:100%;
+    display: flex;
+}
+
+.matchImage {
+    float: left;
+    vertical-align: top;
+}
+
+.textclass {
+    padding: 2em;
+    float:left;
+    width:300px;
+    height:20px;
+    vertical-align: top;
+}
