@@ -30,25 +30,18 @@
   ],
   "messages": [
     {
-      "message": "fjdkfjlsd",
-      "date": "10/22/2020, 11:27:34 AM",
-      "reptileId": 1,
-      "sendeeId": 2,
-      "id": 1
+      "id": 12,
+      "message": "a new message!!! HI",
+      "date": "edited10/27/2020, 02:02:44 PM",
+      "reptileId": 2,
+      "sendeeId": 1
     },
     {
-      "message": "fjdkfjlsd",
-      "date": "10/22/2020, 11:27:34 AM",
+      "id": 13,
+      "message": "you there?",
+      "date": "edited10/27/2020, 02:49:41 PM",
       "reptileId": 2,
-      "sendeeId": 3,
-      "id": 5
-    },
-    {
-      "message": "Hello????",
-      "date": "10/27/2020, 10:43:54 AM",
-      "reptileId": 2,
-      "sendeeId": 5,
-      "id": 6
+      "sendeeId": 3
     }
   ],
   "matches": [

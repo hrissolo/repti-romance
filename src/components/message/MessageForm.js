@@ -13,7 +13,8 @@ export const MessageForm = (props) => {
     const [message, setMessage] = useState({})
     const [isLoading, setIsLoading] = useState(true)
 
-    const { messageId } = useParams();
+    const messageId  = props.messageId 
+    console.log(messageId, "mesasges")
     const history = useHistory()
     const {reptileId} = useParams();
 
@@ -24,7 +25,7 @@ export const MessageForm = (props) => {
     }
 
     useEffect(() => {
-        getMessages(localStorage.getItem("lizard_user"), reptileId)
+        // getMessages(localStorage.getItem("lizard_user"), reptileId)
         if (messageId) {
             getMessageById(messageId)
                 .then(message => {
@@ -34,22 +35,21 @@ export const MessageForm = (props) => {
         } else {
             setIsLoading(false)
         }
-    }, [])
+    }, [props.messageId])
 
     const constructNewMsg = () => {
         setIsLoading(true);
         if (messageId) {
             updateMessage({
-                id: message.id,
+                id: messageId,
                 message: message.message,
                 date: "edited" + message.date,
                 reptileId: parseInt(localStorage.getItem("lizard_user")),
                 sendeeId: parseInt(reptileId)
             })
-                .then(() => history.push(`/messages`))
+                // .then(() => history.push(`/messages/${reptileId}`))
         } else {
             addMessage({
-                id: message.id,
                 message: message.message,
                 date: new Intl.DateTimeFormat('en-US', {
                     year: 'numeric', 
@@ -62,27 +62,27 @@ export const MessageForm = (props) => {
                 reptileId: parseInt(localStorage.getItem("lizard_user")),
                 sendeeId: parseInt(reptileId)
             })
-                .then(() => history.push(`/messages/${reptileId}`))
+                // .then(() => history.push(`/messages/${reptileId}`))
                 .then(() => getMessages(localStorage.getItem("lizard_user"), reptileId))
-                .then(() => {
-                    const clearer = document.querySelector("#messageMessage")
-                    clearer.value = ""
-                    message.message = ""
-                })
+                // .then(() => {
+                //     const clearer = document.querySelector("#messageMessage")
+                //     clearer.value = ""
+                //     message.message = ""
+                // })
         }
     }
 
 
     return (
-        <div className="messageList">
-            <h2 id="sectionMessageHeader">Messages</h2>
-            <div className="messagesWindow">
-                {
-                    messages.map(message => {
-                        return <MessageCard key={message.id} reptile={message.reptileId} message={message} />
-                    })
-                }
-            </div>
+        // <div className="messageList">
+        //     <h2 id="sectionMessageHeader">Messages</h2>
+        //     <div className="messagesWindow">
+        //         {
+        //             messages.map(message => {
+        //                 return <MessageCard key={message.id} reptile={message.reptileId} message={message} />
+        //             })
+        //         }
+        //     </div>
 
             <form className="messageForm">
                 <fieldset>
@@ -92,20 +92,20 @@ export const MessageForm = (props) => {
                         <textarea type="text" id="messageMessage" width="30em" name="message" required className="form-control"
                             placeholder="Write message here"
                             onChange={handleInputChange}
-                            defaultValue=""
+                            defaultValue={message.message}
                         />
                     <br></br>
-                <Button primary type="submit"
-                    // disabled={isLoading} herererer
+                <Button primary type="button"
+                    disabled={isLoading} 
                     onClick={event => {
                         event.preventDefault() // Prevent browser from submitting the form
                         constructNewMsg()
-                    }}> Send message
+                    }}> {messageId ? <> Save message</> : <>Add message</>}
                 </Button>
                 </div>
                 </fieldset>
             </form>
-        </div>
+        // </div>
 
     )
 }

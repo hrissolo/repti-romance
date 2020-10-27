@@ -58,7 +58,7 @@ export const ApplicationViews = props => {
             <MessageProvider>
                 <MatchProvider>
                     <Route exact path="/messages/:reptileId(\d+)">
-                        <MessageForm />
+                        <MessageList />
                     </Route>
                 </MatchProvider>
             </MessageProvider>

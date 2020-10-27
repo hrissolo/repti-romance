@@ -42,11 +42,11 @@ export const MessageProvider = (props) => {
             .then(res => res.json())
     }
 
-    const deleteMessage = messageId => {
-        return fetch(`http://localhost:8088/messages/${messageId}`, {
+    const deleteMessage = message => {
+        return fetch(`http://localhost:8088/messages/${message}`, {
             method: "DELETE"
         })
-            .then(getMessages)
+            .then(()=> getMessages(message.reptileId, message.sendeeId))
     }
 
     const updateMessage = message => {
@@ -57,7 +57,7 @@ export const MessageProvider = (props) => {
             },
             body: JSON.stringify(message)
         })
-            .then(getMessages)
+            .then(()=> getMessages(message.reptileId, message.sendeeId))
     }
     
     return (

@@ -7,8 +7,9 @@ import "./Message.css"
 
 //each individual message
 
-export const MessageCard = ({ message }) => {
+export const MessageCard = ({ message, updateEditState }) => {
     const history = useHistory()
+    const {reptileId} = useParams();
 
     const { getMessages, deleteMessage, updateMessage } = useContext(MessageContext)
 
@@ -21,12 +22,14 @@ export const MessageCard = ({ message }) => {
                         () => {
                             deleteMessage(message.id)
                                 .then(() => {
-                                    history.push("/messages")
+                                    history.push(`/messages/${reptileId}`)
                                 })
                         }}><Icon name="trash" />
                     </button>
                     <button onClick={() => {
-                        history.push(`/messages/edit/${message.id}`)
+                        updateEditState(message.id)
+                        console.log("clicked")
+                        history.push(`/messages/${reptileId}`)
                     }}><Icon name="edit" />
                     </button>
                 </>
