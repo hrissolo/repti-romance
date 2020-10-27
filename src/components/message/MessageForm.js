@@ -13,8 +13,8 @@ export const MessageForm = (props) => {
     const [message, setMessage] = useState({})
     const [isLoading, setIsLoading] = useState(true)
 
-    const messageId  = props.messageId 
-    console.log(messageId, "mesasges")
+    let messageId  = props.messageId 
+    
     const history = useHistory()
     const {reptileId} = useParams();
 
@@ -37,16 +37,24 @@ export const MessageForm = (props) => {
         }
     }, [props.messageId])
 
-    const constructNewMsg = () => {
+    const constructNewMsg = (event) => {
+        event.preventDefault()
         setIsLoading(true);
         if (messageId) {
             updateMessage({
                 id: messageId,
                 message: message.message,
-                date: "edited" + message.date,
+                date: "edited " + message.date,
                 reptileId: parseInt(localStorage.getItem("lizard_user")),
                 sendeeId: parseInt(reptileId)
             })
+            .then(() => {
+                const clearer = document.querySelector("#messageMessage")
+                clearer.value = ""
+                message.message = ""
+            })
+            .then(setIsLoading(false))
+            .then(messageId="")
                 // .then(() => history.push(`/messages/${reptileId}`))
         } else {
             addMessage({
@@ -64,11 +72,12 @@ export const MessageForm = (props) => {
             })
                 // .then(() => history.push(`/messages/${reptileId}`))
                 .then(() => getMessages(localStorage.getItem("lizard_user"), reptileId))
-                // .then(() => {
-                //     const clearer = document.querySelector("#messageMessage")
-                //     clearer.value = ""
-                //     message.message = ""
-                // })
+                .then(() => {
+                    const clearer = document.querySelector("#messageMessage")
+                    clearer.value = ""
+                    message.message = ""
+                })
+                .then(setIsLoading(false))
         }
     }
 
@@ -84,7 +93,7 @@ export const MessageForm = (props) => {
         //         }
         //     </div>
 
-            <form className="messageForm">
+            <form className="messageForm" onSubmit={constructNewMsg} > 
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="messageMessage">Type your message here: </label>
@@ -95,12 +104,9 @@ export const MessageForm = (props) => {
                             defaultValue={message.message}
                         />
                     <br></br>
-                <Button primary type="button"
+                <Button primary type="submit"
                     disabled={isLoading} 
-                    onClick={event => {
-                        event.preventDefault() // Prevent browser from submitting the form
-                        constructNewMsg()
-                    }}> {messageId ? <> Save message</> : <>Add message</>}
+                    > {messageId ? <> Save message</> : <>Add message</>}
                 </Button>
                 </div>
                 </fieldset>

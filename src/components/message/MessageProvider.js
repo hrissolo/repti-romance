@@ -16,7 +16,7 @@ export const MessageProvider = (props) => {
         .then(parsedRes => {
             
             fullMsgArray.push(...parsedRes)})
-        .then(()=> fetch(`http://localhost:8088/messages?sendeeId=${user1}&reptileId=${user2}&_expand=reptile`))
+        .then(()=> fetch(`http://localhost:8088/messages?reptileId=${user2}&sendeeId=${user1}&_expand=reptile`))
         .then(res2 => res2.json())
         .then(parsed2Res => {
 	        fullMsgArray.push(...parsed2Res)
@@ -43,7 +43,7 @@ export const MessageProvider = (props) => {
     }
 
     const deleteMessage = message => {
-        return fetch(`http://localhost:8088/messages/${message}`, {
+        return fetch(`http://localhost:8088/messages/${message.id}`, {
             method: "DELETE"
         })
             .then(()=> getMessages(message.reptileId, message.sendeeId))

@@ -21,7 +21,6 @@ export const MessageList = () => {
 
     //card & form are both in list
     const updateEditState = (messageId) => {
-      console.log(messageId, "messageID")
       setEditMsgId(messageId)
     }
 
