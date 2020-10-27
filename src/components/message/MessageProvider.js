@@ -8,11 +8,9 @@ export const MessageContext = createContext()
 export const MessageProvider = (props) => {
     const [messages, setMessages] = useState([])
     
-
     const getMessages = (user1, user2) => {
         let fullMsgArray = []
         
-
         return fetch(`http://localhost:8088/messages?reptileId=${user1}&sendeeId=${user2}&_expand=reptile`)
         .then(res => res.json())
         .then(parsedRes => {
@@ -24,12 +22,12 @@ export const MessageProvider = (props) => {
 	        fullMsgArray.push(...parsed2Res)
         }).then(()=> {
             
-	    setMessages(fullMsgArray)
+	    setMessages(fullMsgArray.sort((a, b) => b.date - a.date))
         })
     }
 
     const addMessage = messageObj => {
-        return fetch(`http://localhost:8088/messages/detail/${messageObj}`, {
+        return fetch(`http://localhost:8088/messages`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
