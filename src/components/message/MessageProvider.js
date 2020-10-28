@@ -8,28 +8,26 @@ export const MessageContext = createContext()
 export const MessageProvider = (props) => {
     const [messages, setMessages] = useState([])
     
-
     const getMessages = (user1, user2) => {
         let fullMsgArray = []
         
-
         return fetch(`http://localhost:8088/messages?reptileId=${user1}&sendeeId=${user2}&_expand=reptile`)
         .then(res => res.json())
         .then(parsedRes => {
             
             fullMsgArray.push(...parsedRes)})
-        .then(()=> fetch(`http://localhost:8088/messages?sendeeId=${user1}&reptileId=${user2}&_expand=reptile`))
+        .then(()=> fetch(`http://localhost:8088/messages?reptileId=${user2}&sendeeId=${user1}&_expand=reptile`))
         .then(res2 => res2.json())
         .then(parsed2Res => {
 	        fullMsgArray.push(...parsed2Res)
         }).then(()=> {
             
-	    setMessages(fullMsgArray)
+	    setMessages(fullMsgArray.sort((a, b) => b.date - a.date))
         })
     }
 
     const addMessage = messageObj => {
-        return fetch(`http://localhost:8088/messages/detail/${messageObj}`, {
+        return fetch(`http://localhost:8088/messages`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -44,11 +42,11 @@ export const MessageProvider = (props) => {
             .then(res => res.json())
     }
 
-    const deleteMessage = messageId => {
-        return fetch(`http://localhost:8088/messages/${messageId}`, {
+    const deleteMessage = message => {
+        return fetch(`http://localhost:8088/messages/${message.id}`, {
             method: "DELETE"
         })
-            .then(getMessages)
+            .then(()=> getMessages(message.reptileId, message.sendeeId))
     }
 
     const updateMessage = message => {
@@ -59,7 +57,7 @@ export const MessageProvider = (props) => {
             },
             body: JSON.stringify(message)
         })
-            .then(getMessages)
+            .then(()=> getMessages(message.reptileId, message.sendeeId))
     }
     
     return (

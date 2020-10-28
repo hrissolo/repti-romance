@@ -27,12 +27,13 @@ export const ReptileCard = ( {reptiles} ) => {
         .then(getReptiles)
     }
 
+
     return (
-    <section className="reptile">
+    <section className="reptiles" id={`${reptiles.id}`}>
         
         <Card>
         <Card.Header>
-        <h3 className="reptile__name">
+        <h3 className="reptile_Card">
         { reptiles.username } </h3>
         </Card.Header>
         
@@ -45,7 +46,8 @@ export const ReptileCard = ( {reptiles} ) => {
         
         
         <section><Button.Group fluid>
-            <Button negative>No Thnx</Button><Button.Or/><Button positive type="button" className="addMatchButton" onClick={
+            <Button negative 
+            > No Thnx</Button><Button.Or/><Button positive type="button" className="addMatchButton" onClick={
                 () => {
                     addMatchObj(reptiles.id)
                 }

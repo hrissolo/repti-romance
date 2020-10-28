@@ -30,53 +30,46 @@
   ],
   "messages": [
     {
-      "message": "fjdkfjlsd",
-      "date": "10/22/2020, 11:27:34 AM",
+      "id": 14,
+      "message": "U there?????",
+      "date": "edited edited edited 10/27/2020, 03:17:13 PM",
+      "reptileId": 2,
+      "sendeeId": 3
+    },
+    {
+      "message": "HI :)",
+      "date": "10/27/2020, 03:20:37 PM",
+      "reptileId": 2,
+      "sendeeId": 1,
+      "id": 15
+    },
+    {
+      "id": 16,
+      "message": "Hello whatsup?",
+      "date": "edited 10/27/2020, 03:21:04 PM",
+      "reptileId": 2,
+      "sendeeId": 1
+    },
+    {
+      "id": 23,
+      "message": "new msg",
+      "date": "edited 10/27/2020, 03:41:23 PM",
+      "reptileId": 1,
+      "sendeeId": 3
+    },
+    {
+      "message": "yes?",
+      "date": "10/28/2020, 09:11:05 AM",
       "reptileId": 1,
       "sendeeId": 2,
-      "id": 1
+      "id": 26
     },
     {
-      "message": "fjdkfjlsd",
-      "date": "10/22/2020, 11:27:34 AM",
-      "reptileId": 2,
-      "sendeeId": 3,
-      "id": 2
-    },
-    {
-      "message": "fjdkfjlsd",
-      "date": "10/03/2020, 11:27:34 AM",
-      "reptileId": 2,
-      "sendeeId": 1,
-      "id": 3
-    },
-    {
-      "message": "do it ",
-      "date": "10/27/2020, 09:25:31 AM",
-      "reptileId": 2,
-      "sendeeId": 1,
-      "id": 4
-    },
-    {
-      "message": "you there????",
-      "date": "10/27/2020, 09:26:46 AM",
-      "reptileId": 2,
-      "sendeeId": 1,
-      "id": 5
-    },
-    {
-      "message": "How about now? ",
-      "date": "10/27/2020, 09:27:01 AM",
-      "reptileId": 2,
-      "sendeeId": 1,
-      "id": 6
-    },
-    {
-      "message": "How about now? ",
-      "date": "10/27/2020, 09:28:22 AM",
-      "reptileId": 2,
-      "sendeeId": 3,
-      "id": 7
+      "message": "jkgsdjfklsfsd",
+      "date": "10/28/2020, 09:25:13 AM",
+      "reptileId": 1,
+      "sendeeId": 2,
+      "id": 27
     }
   ],
   "matches": [

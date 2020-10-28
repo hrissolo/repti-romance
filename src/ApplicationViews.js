@@ -47,30 +47,11 @@ export const ApplicationViews = props => {
         </ReptileProvider>
 
         <ReptileProvider>
-        <MatchProvider>
-            <Route exact path="/matches">
-                <MatchList />
-            </Route>
-        </MatchProvider>
-        </ReptileProvider>
-
-        {/* <ReptileProvider>
-        <MessageProvider>
             <MatchProvider>
-                <Route exact path="/messages/:messageId(/d+)">
-                    <MessageForm />
+                <Route exact path="/matches">
+                    <MatchList />
                 </Route>
             </MatchProvider>
-        </MessageProvider>
-        </ReptileProvider> */}
-
-
-        <ReptileProvider>
-            <MessageProvider>
-                <Route exact path="/messages/detail/:messageId(\d+)">
-                    <MessageForm />
-                </Route>
-            </MessageProvider>
         </ReptileProvider>
 
         <ReptileProvider>
