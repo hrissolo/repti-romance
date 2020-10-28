@@ -3,6 +3,7 @@ import { ReptileContext } from "./ReptileProvider"
 import { useParams, useHistory } from "react-router-dom"
 import { Image, Icon, Card } from "semantic-ui-react"
 import { ReptileList } from "./ReptileList"
+import "./Reptile.css"
 
 export const ReptileDetail = () => {
     const { getReptileById, editReptile } = useContext(ReptileContext)
@@ -37,8 +38,8 @@ export const ReptileDetail = () => {
     })
             
     return (
-        <section className="reptile">
-            <Card><Card.Header>
+        <section className="reptile_detail"><h2>My Profile</h2>
+            <Card centered><Card.Header>
             <h3 className="reptile__name">{reptile.username}</h3></Card.Header>
             <Image src={reptile.photo}></Image>
             <Card.Content>

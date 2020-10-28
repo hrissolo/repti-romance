@@ -5,7 +5,7 @@ import { MatchContext } from "../matches/MatchProvider"
 import { ReptileContext } from "./ReptileProvider"
 import Magnifier from "react-magnifier";
 import Notifications, {notify} from 'react-notify-toast';
-
+import "./Reptile.css"
 
 
 export const ReptileCard = ( {reptiles} ) => {
@@ -27,9 +27,20 @@ export const ReptileCard = ( {reptiles} ) => {
         .then(getReptiles)
     }
 
+    //button for scroll bar jumping 
+    const button = document.querySelector('.container');
+    const scrollWin = () => {
+    let x = button.scrollLeft
+    x=x+390   
+    button.scroll(x,0)}
+
+    
 
     return (
+
+
     <section className="reptiles" id={`${reptiles.id}`}>
+
         
         <Card>
         <Card.Header>
@@ -46,16 +57,20 @@ export const ReptileCard = ( {reptiles} ) => {
         
         
         <section><Button.Group fluid>
-            <Button negative 
-            > No Thnx</Button><Button.Or/><Button positive type="button" className="addMatchButton" onClick={
+            <Button negative onClick={() => scrollWin()}
+            > No Thnx</Button>
+            <Button.Or/>
+            <Button positive type="button" className="addMatchButton" onClick={
                 () => {
                     addMatchObj(reptiles.id)
-                }
+                    scrollWin()
+                } 
             }
             >MATCH</Button>
             </Button.Group>
         </section>
         </Card>
+
     </section>
     )
 }
