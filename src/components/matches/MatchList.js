@@ -17,7 +17,7 @@ export const MatchList = () => {
   return (
     <>
       
-      <h2>Your Matches</h2>
+      <h2>My Matches</h2>
       <div>
       {
       matches.map(match => {

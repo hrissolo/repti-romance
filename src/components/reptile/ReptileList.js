@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { ReptileContext } from "./ReptileProvider"
 import { ReptileCard } from "./ReptileCard"
 import {useHistory} from "react-router-dom"
+import "./Reptile.css"
 
 export const ReptileList = () => {
     const { reptiles, getReptiles } = useContext(ReptileContext)
@@ -16,16 +17,18 @@ export const ReptileList = () => {
 
 
     return (
-      <>
-          <h1>Reptiles</h1>
-        <div>
+      
+    <>
+      <h1>Reptiles</h1>
           
-      {
-      reptiles.map(reptiles => {
-        return <ReptileCard key={reptiles.id} reptiles={reptiles} />
-      })
-      }
-        </div>
-      </>
+      <div className="container">
+        {
+        reptiles.map(reptiles => {
+          return <ReptileCard key={reptiles.id} reptiles={reptiles} />
+          })
+        }
+      </div>
+
+    </>
   )
 }
