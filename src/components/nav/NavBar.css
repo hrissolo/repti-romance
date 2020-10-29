@@ -1,0 +1,34 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+li {
+    display: inline;
+    float: center
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    text-align: center;
+  }
+
+li a:hover {
+    background-color: #55047B;
+    color: white
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex: 100%;
+    background-color: white;
+}
+
+.navbar__link {
+    color: black;
+    font-family: 'Slabo 27px', serif;
+}

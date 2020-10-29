@@ -1,0 +1,77 @@
+.container--login {
+    width: 520px;
+    height: 560px;
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 8px #55047B;
+}
+
+.container--register {
+    width: 520px;
+    height: 560px;
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 8px #55047B;
+}
+
+.form--login{
+    width: 520px;
+    height: 530px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px
+}
+
+.field {
+    width: 480px
+}
+
+.form-register-txt{
+    font-family: 'Staatliches', cursive;
+    font-size: 30px;
+}
+
+.form-login-txt{
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+    margin: 10px
+}
+
+.loginIMG {
+    margin: 10px;
+}
+
+.login-content{
+    margin: 10px
+}
+
+.reggieLink{
+    color: white;
+    margin: 0px 0px 0px 30px;
+    font-family: 'Slabo 27px', serif;
+}
+
+.signinTxt {
+    font-family: 'Slabo 27px', serif;
+}
+
+.registerLabel{
+    font-family: 'Slabo 27px', serif;
+}
+
+.register-form-align{
+    margin: 10px;
+}

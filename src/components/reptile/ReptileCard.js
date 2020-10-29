@@ -34,7 +34,8 @@ export const ReptileCard = ( {reptiles} ) => {
     x=x+390   
     button.scroll(x,0)}
 
-    
+
+
 
     return (
 
@@ -49,24 +50,24 @@ export const ReptileCard = ( {reptiles} ) => {
         </Card.Header>
         
             <Link to={`/reptiles/detail/${reptiles.id}`}>  
-                <Magnifier src={ reptiles.photo } alt="Me!"></Magnifier>
+                <Magnifier  src={ reptiles.photo } alt="Me!"></Magnifier>
             </Link>
         <Card.Content>
-        <div className="reptile__species">{ reptiles.species }</div>
+        <div className="reptile__species"><b>Bio:</b> { reptiles.bio }</div>
         </Card.Content>
         
         
         <section><Button.Group fluid>
-            <Button negative onClick={() => scrollWin()}
-            > No Thnx</Button>
+            <Button color="olive" onClick={() => scrollWin()}
+            > Pass</Button>
             <Button.Or/>
-            <Button positive type="button" className="addMatchButton" onClick={
+            <Button color="purple" type="button" className="addMatchButton" onClick={
                 () => {
                     addMatchObj(reptiles.id)
                     scrollWin()
                 } 
             }
-            >MATCH</Button>
+            >Match 👅</Button>
             </Button.Group>
         </section>
         </Card>

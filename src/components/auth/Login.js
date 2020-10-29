@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
+import { Button, Form, Input, Icon, Image } from 'semantic-ui-react'
 import "./Login.css";
 
 export const Login = props => {
@@ -33,39 +33,44 @@ export const Login = props => {
     <main className="container--login">
       <dialog className="dialog dialog--auth" ref={existDialog}>
         <div>User does not exist</div>
-        <button
+        <Button
           className="button--close"
           onClick={e => existDialog.current.close()}
         >
           Close
-        </button>
+        </Button>
       </dialog>
 
       <section>
         
-        <form className="form--login" onSubmit={handleLogin}>
-          <h1>Repti-Romance</h1>
-          <h2>Sign in to get slitherin'~</h2>
-          <fieldset>
-            <label htmlFor="inputEmail"> Email address </label>
+        <Form className="form--login" onSubmit={handleLogin}>
+          <h1 className="form-login-txt">Repti-Romance</h1>
+          
+          <img className="loginIMG" src="https://media.giphy.com/media/ejJgnxKlKVe5ucRPtC/giphy.gif"/>
+          
+          <div className="login-content">
+          <h2 className="signinTxt">Sign in to get slitherin'~</h2>
+          <Form.Field>
             <input
+              size= "large"
+              label="Email Address"
               ref={email}
               type="email"
               id="email"
               className="form-control"
-              placeholder="Email address"
+              placeholder="@ Email address"
               required
               autoFocus
             />
-          </fieldset>
-          
-            <button type="submit">Sign in</button>
-          </form>
+          </Form.Field>
+            <Button color="olive" type="submit">Sign in</Button>
+            <Link className="reggieLink" to="/register">Not a member yet?</Link>
+            </div>
+            
+          </Form>
         
-      </section>
-      <section className="link--register">
-        <Link to="/register">Not a member yet?</Link>
       </section>
     </main>
   );
 };
+

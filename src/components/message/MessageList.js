@@ -1,14 +1,13 @@
 import React, { useContext, useEffect, useState } from "react"
 import { MessageContext } from "../message/MessageProvider"
 import { MessageCard } from "./MessageCard"
-import {useHistory, useParams} from "react-router-dom"
+import { useParams} from "react-router-dom"
 import { MessageForm} from "./MessageForm"
 
     //the list of each individual message
 
 export const MessageList = () => {
     const { messages, getMessages } = useContext(MessageContext)
-    const history = useHistory()
     const lizard_user = localStorage.getItem("lizard_user")
     const {reptileId} = useParams();
     const [editMsgId, setEditMsgId] = useState("")
@@ -27,7 +26,8 @@ export const MessageList = () => {
 
     return (
       <>
-          <h1>Messages</h1>
+      <div className="messages_container">
+          <h1 className="msgs_title">Messages</h1>
         <div>
 
       {
@@ -38,6 +38,7 @@ export const MessageList = () => {
         </div>
       
       <MessageForm messageId={editMsgId} />
+      </div>
       </>
   )
 }

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { MessageContext } from "./MessageProvider"
 import {ReptileContext} from "../reptile/ReptileProvider"
 import { useHistory, useParams } from 'react-router-dom';
-import { Icon } from "semantic-ui-react"
+import { Icon, Button } from "semantic-ui-react"
 import "./Message.css"
 
 //each individual message
@@ -18,21 +18,16 @@ export const MessageCard = ({ message, updateEditState }) => {
         if (message.reptileId === parseInt(localStorage.getItem("lizard_user")))
             return (
                 <>
-                    <button onClick={
+                    <Button size="tiny" onClick={
                         () => {
                             deleteMessage(message)
-                                // .then(() => {
-                                //     history.push(`/messages/${reptileId}`)
-                                // })
                                 .then(getMessages(message.reptileId, message.sendeeId))
                         }}><Icon name="trash" />
-                    </button>
-                    <button onClick={() => {
+                    </Button>
+                    <Button size="tiny" onClick={() => {
                         updateEditState(message.id)
-                        console.log("clicked")
-                        // history.push(`/messages/${reptileId}`)
                     }}><Icon name="edit" />
-                    </button>
+                    </Button>
                 </>
             )
     })
@@ -40,12 +35,15 @@ export const MessageCard = ({ message, updateEditState }) => {
     return (
         <section className="messageBox">
                 <section className="messageContainer">
+                    
                     <div className="message"><strong>{message.reptile.username}</strong> - <em>{message.message}</em></div>
+                    
+                </section>
+                <div className="dateAndButton">
                     <div className="message__date">{message.date}</div>
-                </section>
-                <section className="buttons">
+                <section className="buttonSection">
                     {buttonShow()}
-                </section>
+                </section></div>
         </section>
     )
 }

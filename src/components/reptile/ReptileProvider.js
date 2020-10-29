@@ -7,7 +7,6 @@ export const ReptileContext = createContext()
 export const ReptileProvider = (props) => {
     const [reptiles, setReptiles] = useState([])
 
-    // const {matches} = useContext(MatchContext)
 
     const getReptiles = () => {
         return fetch("http://localhost:8088/reptiles")

@@ -1,18 +1,46 @@
 
 .matchCard {
-    width:100%;
+    width:95%;
     display: flex;
+    background-color: white;
+    margin: 1em;
+    box-shadow: 5px 5px 2px darkgray ;
 }
 
+.matches_title{
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+    margin: 10px 10px 20px 10px;
+}
+
+/* //photo */
 .matchImage {
     float: left;
     vertical-align: top;
 }
 
 .textclass {
-    padding: 2em;
+    padding: 1em;
     float:left;
     width:300px;
     height:20px;
     vertical-align: top;
+}
+
+.matchUsername{
+    font-family: 'Slabo 27px', serif;
+}
+
+.matchListcontainer {
+    width: 520px;
+    height: 560px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 8px #55047B;
+    overflow: scroll ;
 }
