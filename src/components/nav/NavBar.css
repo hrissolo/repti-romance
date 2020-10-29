@@ -1,0 +1,30 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+li {
+    display: inline;
+    float: left
+}
+
+li a {
+    display: block;
+    padding: 8px;
+  }
+
+li a:hover {
+    background-color: green;
+}
+
+.navbar {
+    display: flex;
+    flex: 100%;
+    background-color: gray;
+}
+
+li a:active {
+    color: green
+}

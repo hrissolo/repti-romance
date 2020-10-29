@@ -4,6 +4,7 @@ import { ReptileCard } from "./ReptileCard"
 import {useHistory} from "react-router-dom"
 import "./Reptile.css"
 
+
 export const ReptileList = () => {
     const { reptiles, getReptiles } = useContext(ReptileContext)
     const history = useHistory()
@@ -19,9 +20,11 @@ export const ReptileList = () => {
     return (
       
     <>
+    
       <h1>Reptiles</h1>
           
       <div className="container">
+      
         {
         reptiles.map(reptiles => {
           return <ReptileCard key={reptiles.id} reptiles={reptiles} />

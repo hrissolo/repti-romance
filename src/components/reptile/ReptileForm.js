@@ -2,6 +2,7 @@ import React, { useContext, useRef, useEffect, useState } from "react"
 import { ReptileContext } from "./ReptileProvider"
 import { useHistory, useParams  } from 'react-router-dom';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
+import "./Reptile.css"
 
 export const ReptileForm = (props) => {
     const { addReptile, getReptiles, getReptileById, editReptile } = useContext(ReptileContext)
@@ -14,14 +15,6 @@ export const ReptileForm = (props) => {
 
     const {reptileId} = useParams();
     const history = useHistory()
-    /*
-        Create references that can be attached to the input
-        fields in the form. This will allow you to get the
-        value of the input fields later when the user clicks
-        the save button.
-
-        No more `document.querySelector()` in React.
-    */
     const email = useRef(null)
     const username = useRef(null)
     const photo = useRef(null)
@@ -30,20 +23,12 @@ export const ReptileForm = (props) => {
     const bio = useRef(null)
 
     const handleControlledInputChange = (event) => {
-        //When changing a state object or array, 
-        //always create a copy make changes, and then set state.
         const newReptile = { ...reptiles }
-        //animal is an object with properties. 
-        //set the property to the new value
         newReptile[event.target.name] = event.target.value
-        //update state
         setReptiles(newReptile)
     }
 
 
-    /*
-        Get animal state and location state on initialization.
-    */
     useEffect(() => {
         if (reptileId){
             getReptileById(reptileId)
@@ -61,7 +46,6 @@ export const ReptileForm = (props) => {
         if (reptiles === 0) {
             window.alert("Please fill the fields")
         } else {
-            //disable the button - no extra clicks
             setIsLoading(true);
             if (reptileId){
                 //PUT - update

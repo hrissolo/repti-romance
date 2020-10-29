@@ -21,16 +21,11 @@ export const MessageCard = ({ message, updateEditState }) => {
                     <button onClick={
                         () => {
                             deleteMessage(message)
-                                // .then(() => {
-                                //     history.push(`/messages/${reptileId}`)
-                                // })
                                 .then(getMessages(message.reptileId, message.sendeeId))
                         }}><Icon name="trash" />
                     </button>
                     <button onClick={() => {
                         updateEditState(message.id)
-                        console.log("clicked")
-                        // history.push(`/messages/${reptileId}`)
                     }}><Icon name="edit" />
                     </button>
                 </>

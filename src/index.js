@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import './index.css';
 import { ReptiRomance } from './ReptiRomance';
 import 'semantic-ui-css/semantic.min.css'
-
+import Magnifier from "react-magnifier";
 
 
 ReactDOM.render(

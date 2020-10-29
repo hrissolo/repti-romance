@@ -44,6 +44,15 @@
       "photo": " https://i.pinimg.com/564x/8a/17/40/8a1740cb0f903c1fd580aef5988ed213.jpg",
       "bio": "We love scary movies",
       "id": 5
+    },
+    {
+      "email": "stink@stink.com",
+      "username": "Stinky!",
+      "species": "Tortious",
+      "lookingFor": "a spicy snack",
+      "photo": "https://images.unsplash.com/photo-1562530371-30a73dd818a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80",
+      "bio": "I love mud",
+      "id": 6
     }
   ],
   "messages": [

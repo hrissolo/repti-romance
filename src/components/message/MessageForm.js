@@ -25,7 +25,6 @@ export const MessageForm = (props) => {
     }
 
     useEffect(() => {
-        // getMessages(localStorage.getItem("lizard_user"), reptileId)
         if (messageId) {
             getMessageById(messageId)
                 .then(message => {
@@ -55,7 +54,6 @@ export const MessageForm = (props) => {
             })
             .then(setIsLoading(false))
             .then(messageId="")
-                // .then(() => history.push(`/messages/${reptileId}`))
         } else {
             addMessage({
                 message: message.message,
@@ -70,7 +68,6 @@ export const MessageForm = (props) => {
                 reptileId: parseInt(localStorage.getItem("lizard_user")),
                 sendeeId: parseInt(reptileId)
             })
-                // .then(() => history.push(`/messages/${reptileId}`))
                 .then(() => getMessages(localStorage.getItem("lizard_user"), reptileId))
                 .then(() => {
                     const clearer = document.querySelector("#messageMessage")
@@ -83,15 +80,6 @@ export const MessageForm = (props) => {
 
 
     return (
-        // <div className="messageList">
-        //     <h2 id="sectionMessageHeader">Messages</h2>
-        //     <div className="messagesWindow">
-        //         {
-        //             messages.map(message => {
-        //                 return <MessageCard key={message.id} reptile={message.reptileId} message={message} />
-        //             })
-        //         }
-        //     </div>
 
             <form className="messageForm" onSubmit={constructNewMsg} > 
                 <fieldset>
@@ -111,7 +99,6 @@ export const MessageForm = (props) => {
                 </div>
                 </fieldset>
             </form>
-        // </div>
 
     )
 }

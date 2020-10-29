@@ -1,0 +1,68 @@
+.container--login {
+    width: 520px;
+    height: 560px;
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-image: url("https://media.giphy.com/media/l4FGGiNqRGh5q4GxW/giphy.gif"); */
+    background-color: gray;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 8px #55047B;
+}
+
+.container--register {
+    width: 520px;
+    height: 560px;
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 8px #55047B;
+}
+
+.form--login{
+    width: 540px;
+    height: 530px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px
+}
+
+.field {
+    width: 480px
+}
+
+.form-register-txt{
+    font-family: 'Staatliches', cursive;
+}
+
+.form-login-txt{
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+    margin: 10px
+}
+
+.loginIMG {
+    margin: 10px;
+}
+
+.login-content{
+    margin: 10px
+}
+
+.reggieLink{
+    color: white;
+    margin: 0px 0px 0px 30px
+}
+
+.signinTxt {
+    font-family: 'Slabo 27px', serif;
+}

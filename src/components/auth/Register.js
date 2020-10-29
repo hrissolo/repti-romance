@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
+import { Button, Form, Input, Icon } from 'semantic-ui-react'
 import "./Login.css";
 
 
@@ -52,7 +53,8 @@ export const Register = props => {
   };
 
   return (
-    <main style={{ textAlign: "left" }}>
+    
+    <main className="container--register" style={{ textAlign: "left" }}>
       <dialog className="dialog dialog--password" ref={conflictDialog}>
         <div>Account with that email address already exists</div>
         <button
@@ -63,75 +65,77 @@ export const Register = props => {
         </button>
       </dialog>
       
-      <form className="form--login" onSubmit={handleRegister}>
-        <h1 className="h3 mb-3 font-weight-normal">
+      <Form className="form--login" onSubmit={handleRegister}>
+        <h1 className="form-register-txt">
           Join now!
         </h1>
-          <div>
-          <label htmlFor="inputUsername">Create a Username </label>
+          <Form.Group>
           <input
+            label="Create a Username"
             ref={username}
             type="text"
             name="username"
+            width={8}
             className="form-control"
             placeholder="Username"
             required
             autoFocus
-          /></div>
-        <div>
-          <label htmlFor="inputEmail">Email Address </label>
+          />
           <input
+            label="Email Address"
             ref={email}
+            width={8}
             type="email"
             name="email"
             className="form-control"
             placeholder="Email address"
             required
-          /></div>
-        <div>
-          <label htmlFor="inputSpecies">Species</label>
+          /></Form.Group>
+      
           <input
             ref={species}
+            label="Species"
             type="species"
             name="species"
             className="form-control"
             placeholder="Species"
             required
-          /></div>
-        <div>
-          <label htmlFor="inputLookingFor">I'm looking for ... </label>
+          />
+          
           <input
             ref={lookingFor}
+            label="I'm looking for..."
             type="lookingFor"
             name="lookingFor"
             className="form-control"
             placeholder="Lookin' for"
             required
-          /></div>
-        <div>
-          <label htmlFor="inputPhoto">Here's my best angle</label>
+          />
+          
           <input
             ref={photo}
+            label="Here's my best angle"
             type="photo"
             name="photo"
             className="form-control"
             placeholder="A photo of me"
             required
-          /></div>
-        <div>
-          <label htmlFor="inputBio">Bio</label>
+          />
+        
+        
           <input
+            label="Bio"
             ref={bio}
             type="bio"
             name="bio"
             className="form-control"
             placeholder="A little about me."
             required
-          /></div>  
+          />
         
-          <button type="submit"> Create Account </button>
+          <Button type="submit"> Create Account </Button>
         
-      </form>
+      </Form>
     </main>
     
   );
