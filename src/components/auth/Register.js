@@ -147,7 +147,7 @@ export const Register = props => {
             required
           /></Form.Field>
         
-          <Button type="submit"> Create Account </Button>
+          <Button color="olive" type="submit"> Create Account </Button>
           </div>
       </Form>
     </main>

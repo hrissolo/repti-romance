@@ -1,3 +1,5 @@
+
+/* //the scroll box containing of potential matches */
 .container {
     width: 400px;
     height: 600px;
@@ -22,6 +24,60 @@
     box-shadow: 10px 10px 8px #55047B;
   }
 
+  .reptile_detail{
+    width: 520px;
+    height: 560px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 8px #55047B;
+  }
+
+  /* //edit profile */
+  .editFormContainer {
+    width: 520px;
+    height: 560px;
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 8px #55047B;
+}
+
+.taskForm__title {
+  
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+    margin: 10px
+
+}
+
+.edit-form-align{
+  margin: 10px;
+}
+
+.form-group {
+  font-family: 'Slabo 27px', serif;
+}
+
+/* //edit profile form */
+.taskForm{
+    width: 520px;
+    height: 530px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px
+}
+
   .reptilesTitle{
     font-family: 'Staatliches', cursive;
     font-size: 40px;
@@ -45,7 +101,7 @@
 
   .reptile_Card{
     font-family: 'Slabo 27px', serif;
-    padding: 10px
+    padding: 10px;
   }
 
   .reptile__species {
@@ -61,7 +117,9 @@
   }
 
   .reptile__name{
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+    margin: 10px
   }
 
   html {

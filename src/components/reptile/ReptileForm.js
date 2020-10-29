@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useEffect, useState } from "react"
 import { ReptileContext } from "./ReptileProvider"
-import { useHistory, useParams  } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
 import "./Reptile.css"
 
@@ -77,12 +77,14 @@ export const ReptileForm = (props) => {
 
     
     return (
+        <div className="editFormContainer">
         <Form className="taskForm">
+            <div className="edit-form-align">
             <h2 className="taskForm__title">Edit Profile</h2>
-            <Form.Field >
+            <Form.Group><Form.Field >
                 <div className="form-group">
                     <label htmlFor="taskName">Username: </label>
-                    <input type="username" name="username" id="username" value={reptiles.username} required autoFocus className="form-control" placeholder="Task name" 
+                    <input type="text" name="username" width={5} id="username" value={reptiles.username} required autoFocus className="form-control" placeholder="Task name" 
                     onChange={handleControlledInputChange}
                     />
                 </div>
@@ -90,15 +92,15 @@ export const ReptileForm = (props) => {
             <Form.Field >
                 <div className="form-group">
                     <label htmlFor="email">Email: </label>
-                    <input type="bio" name="email" value={reptiles.email} className="form-control"
+                    <input type="text" width={5} name="email" value={reptiles.email} className="form-control"
                     onChange={handleControlledInputChange}
                     ></input>
                 </div>
-            </Form.Field>
+            </Form.Field></Form.Group>
             <Form.Field >
                 <div className="form-group">
                     <label htmlFor="bio">Bio: </label>
-                    <input type="bio" name="bio" value={reptiles.bio} className="form-control"
+                    <input type="text"  name="bio" value={reptiles.bio} className="form-control"
                     onChange={handleControlledInputChange}
                     ></input>
                 </div>
@@ -107,7 +109,7 @@ export const ReptileForm = (props) => {
             <Form.Field >
                 <div className="form-group">
                     <label htmlFor="completeTask">Species: </label>
-                    <input type="species" name="species" value={reptiles.species} className="form-control"
+                    <input type="text"  name="species" value={reptiles.species} className="form-control"
                     onChange={handleControlledInputChange}
                     ></input>
                 </div>
@@ -115,7 +117,7 @@ export const ReptileForm = (props) => {
             <Form.Field >
                 <div className="form-group">
                     <label htmlFor="photo">Photo: </label>
-                    <input type="photo" name="photo" value={reptiles.photo} className="form-control"
+                    <input type="text"  name="photo" value={reptiles.photo} className="form-control"
                     onChange={handleControlledInputChange}
                     ></input>
                 </div>
@@ -123,19 +125,19 @@ export const ReptileForm = (props) => {
             <Form.Field >
                 <div className="form-group">
                     <label htmlFor="completeTask">Looking For: </label>
-                    <input type="lookingFor" name="lookingFor" value={reptiles.lookingFor} className="form-control"
+                    <input type="text"  name="lookingFor" value={reptiles.lookingFor} className="form-control"
                     onChange={handleControlledInputChange}
                     ></input>
                 </div>
             </Form.Field>
-            <Button type="saveRepti"
+            <Button color="purple"type="saveRepti"
                 disabled={isLoading}
                 onClick = {evt => {
                     evt.preventDefault() // Prevent browser from submitting the form
                     constructNewRepti()
                 }}> {reptileId ? <>Save Profile</> : <>Add Task</>}
-                </Button>
-        </Form>
+                </Button></div>
+        </Form></div>
     )
 }
 

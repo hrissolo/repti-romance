@@ -1,13 +1,12 @@
 import React, { useContext, useEffect } from "react"
 import { MatchContext } from "./MatchProvider"
 import { MatchCard } from "./MatchCard"
-import { useHistory } from "react-router-dom"
 import "./Match.css"
 
 export const MatchList = () => {
   
   const { matches, getMatches } = useContext(MatchContext)
-  const history = useHistory()
+  
 
   useEffect(() => {
 	  getMatches()
@@ -16,13 +15,14 @@ export const MatchList = () => {
 
   return (
     <>
-      
-      <h2>My Matches</h2>
+      <div className="matchListcontainer">
+      <h1 className="matches_title">My Matches</h1>
       <div>
       {
       matches.map(match => {
         return <MatchCard key={match.id} match={match} />
       })}
+    </div>
     </div>
     </>
   )

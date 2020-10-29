@@ -63,7 +63,7 @@ export const Login = props => {
               autoFocus
             />
           </Form.Field>
-            <Button type="submit">Sign in</Button>
+            <Button color="olive" type="submit">Sign in</Button>
             <Link className="reggieLink" to="/register">Not a member yet?</Link>
             </div>
             

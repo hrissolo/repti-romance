@@ -1,31 +1,13 @@
 {
   "reptiles": [
     {
-      "id": 1,
-      "username": "Papaya",
-      "bio": "a handsome beardie",
-      "lookingFor": "Friends",
-      "species": "Bearded Dragon111",
-      "photo": "https://images.unsplash.com/photo-1597146936637-369228a2c660?ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60",
-      "email": "papa@test.com"
-    },
-    {
       "id": 2,
-      "username": "222222lilslothiiiiiii",
-      "bio": "sweet c",
+      "username": "Sweetie",
+      "bio": "Catch me chillin in the trees",
       "lookingFor": ";-) ???",
-      "species": "cutie chameleon ",
+      "species": "Chameleon",
       "photo": "https://images.unsplash.com/photo-1550877761-2f3c268d2a04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
       "email": "lilslothy@gmail.com"
-    },
-    {
-      "email": "liz3@test.com",
-      "username": "Petey & Pearl",
-      "species": "Bearded Dragons",
-      "lookingFor": "Looking for a third!",
-      "photo": " https://i.pinimg.com/564x/8a/17/40/8a1740cb0f903c1fd580aef5988ed213.jpg",
-      "bio": "We love scary movies",
-      "id": 3
     },
     {
       "email": "stink@stink.com",
@@ -53,86 +35,88 @@
       "photo": "https://images.unsplash.com/photo-1528142887454-935ce9d267dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
       "bio": "I like it hot & humid! ",
       "id": 8
+    },
+    {
+      "id": 10,
+      "username": "Papaya",
+      "bio": "The inspo for this app! You're welcome!",
+      "lookingFor": "Friends",
+      "species": "Bearded Dragon",
+      "photo": "https://images.unsplash.com/photo-1597146936637-369228a2c660?ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60",
+      "email": "papa@test.com"
     }
   ],
   "messages": [
     {
-      "id": 14,
-      "message": "U there?????",
-      "date": "edited edited edited 10/27/2020, 03:17:13 PM",
-      "reptileId": 2,
-      "sendeeId": 3
+      "message": "Hi",
+      "date": "10/29/2020, 03:40:17 PM",
+      "reptileId": 10,
+      "sendeeId": 6,
+      "id": 1
     },
     {
-      "message": "HI :)",
-      "date": "10/27/2020, 03:20:37 PM",
-      "reptileId": 2,
-      "sendeeId": 1,
-      "id": 15
+      "message": "Hey :) ",
+      "date": "10/29/2020, 03:41:03 PM",
+      "reptileId": 6,
+      "sendeeId": 10,
+      "id": 2
     },
     {
-      "id": 16,
-      "message": "Hello whatsup?",
-      "date": "edited 10/27/2020, 03:21:04 PM",
-      "reptileId": 2,
-      "sendeeId": 1
+      "message": "Howdy",
+      "date": "10/29/2020, 03:42:07 PM",
+      "reptileId": 10,
+      "sendeeId": 6,
+      "id": 3
     },
     {
-      "message": "Mesg",
-      "date": "10/28/2020, 11:24:27 AM",
-      "reptileId": 1,
+      "id": 4,
+      "message": "Hehehe",
+      "date": "edited 10/29/2020, 04:05:07 PM",
+      "reptileId": 10,
+      "sendeeId": 6
+    },
+    {
+      "message": "Hey there! ",
+      "date": "10/29/2020, 04:25:03 PM",
+      "reptileId": 10,
       "sendeeId": 2,
-      "id": 28
+      "id": 5
     },
     {
-      "message": "U THERE",
-      "date": "10/28/2020, 12:47:52 PM",
-      "reptileId": 1,
-      "sendeeId": 3,
-      "id": 31
-    },
-    {
-      "message": "hi",
-      "date": "10/28/2020, 12:48:21 PM",
-      "reptileId": 1,
-      "sendeeId": 3,
-      "id": 32
-    },
-    {
-      "message": "Now?",
-      "date": "10/28/2020, 12:48:36 PM",
-      "reptileId": 1,
-      "sendeeId": 3,
-      "id": 33
-    },
-    {
-      "message": "Hello",
-      "date": "10/26/2020, 12:49:03 PM",
-      "reptileId": 1,
+      "message": "you gettin this? ",
+      "date": "10/29/2020, 05:38:52 PM",
+      "reptileId": 10,
       "sendeeId": 2,
-      "id": 34
+      "id": 6
+    },
+    {
+      "message": "Totally! Sup Papaya?",
+      "date": "10/29/2020, 06:12:52 PM",
+      "reptileId": 2,
+      "sendeeId": 10,
+      "id": 7
     }
   ],
   "matches": [
     {
       "reptileId": 2,
-      "matchAddedId": 1,
+      "matchAddedId": 10,
       "id": 1
     },
     {
-      "reptileId": 1,
+      "reptileId": 10,
       "matchAddedId": 2,
       "id": 2
     },
     {
-      "reptileId": 1,
-      "matchAddedId": 3,
-      "id": 3
+      "reptileId": 6,
+      "matchAddedId": 10,
+      "id": 5
     },
     {
-      "reptileId": 3,
-      "matchAddedId": 1,
-      "id": 4
+      "reptileId": 10,
+      "matchAddedId": 6,
+      "id": 6
     }
   ]
 }

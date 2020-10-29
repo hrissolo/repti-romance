@@ -22,7 +22,7 @@ export const MessageProvider = (props) => {
 	        fullMsgArray.push(...parsed2Res)
         }).then(()=> {
             
-	    setMessages(fullMsgArray.sort((a, b) => a.valueOf() - b.valueOf()))
+	    setMessages(fullMsgArray.sort((a, b) => new Date(a.date) - new Date(b.date)))
         })
     }
 
