@@ -7,24 +7,28 @@ ul {
 
 li {
     display: inline;
-    float: left
+    float: center
 }
 
 li a {
     display: block;
     padding: 8px;
+    text-align: center;
   }
 
 li a:hover {
-    background-color: green;
+    background-color: #55047B;
+    color: white
 }
 
 .navbar {
     display: flex;
+    justify-content: center;
     flex: 100%;
-    background-color: gray;
+    background-color: white;
 }
 
-li a:active {
-    color: green
+.navbar__link {
+    color: black;
+    font-family: 'Slabo 27px', serif;
 }

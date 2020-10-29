@@ -20,8 +20,8 @@ export const ReptileList = () => {
     return (
       
     <>
-    
-      <h1>Reptiles</h1>
+    <div className="reptileListcontainer">
+      <h1 className="reptilesTitle">Reptiles</h1>
           
       <div className="container">
       
@@ -31,7 +31,7 @@ export const ReptileList = () => {
           })
         }
       </div>
-
+      </div>
     </>
   )
 }

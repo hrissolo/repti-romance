@@ -5,7 +5,6 @@
     align-self: center;
     margin-left: auto;
     margin-right: auto;
-    /* background-image: url("https://media.giphy.com/media/l4FGGiNqRGh5q4GxW/giphy.gif"); */
     background-color: gray;
     border-radius: 25px;
     padding: 10px;
@@ -28,7 +27,7 @@
 }
 
 .form--login{
-    width: 540px;
+    width: 520px;
     height: 530px;
     align-self: center;
     margin-left: auto;
@@ -42,6 +41,7 @@
 
 .form-register-txt{
     font-family: 'Staatliches', cursive;
+    font-size: 30px;
 }
 
 .form-login-txt{
@@ -60,9 +60,18 @@
 
 .reggieLink{
     color: white;
-    margin: 0px 0px 0px 30px
+    margin: 0px 0px 0px 30px;
+    font-family: 'Slabo 27px', serif;
 }
 
 .signinTxt {
     font-family: 'Slabo 27px', serif;
+}
+
+.registerLabel{
+    font-family: 'Slabo 27px', serif;
+}
+
+.register-form-align{
+    margin: 10px;
 }

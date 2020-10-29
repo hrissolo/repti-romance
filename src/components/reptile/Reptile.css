@@ -5,9 +5,29 @@
     display: flex; 
     align-self: center;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto;
+    padding:  white;
   }
   
+  .reptileListcontainer {
+    width: 520px;
+    height: 560px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 8px #55047B;
+  }
+
+  .reptilesTitle{
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+    margin: 10px
+  }
+
   .reptile_detail {
     display: flex;
     align-content: center;
@@ -21,6 +41,27 @@
 
   .reptiles {
       margin: 50px;
+  }
+
+  .reptile_Card{
+    font-family: 'Slabo 27px', serif;
+    padding: 10px
+  }
+
+  .reptile__species {
+    font-family: 'Slabo 27px', serif;
+  }
+
+  .reptile__lookingFor {
+    font-family: 'Slabo 27px', serif;
+  }
+
+  .reptile__bio {
+    font-family: 'Slabo 27px', serif;
+  }
+
+  .reptile__name{
+    font-family: 'Slabo 27px', serif;
   }
 
   html {

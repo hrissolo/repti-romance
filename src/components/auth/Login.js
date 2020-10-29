@@ -46,7 +46,7 @@ export const Login = props => {
         <Form className="form--login" onSubmit={handleLogin}>
           <h1 className="form-login-txt">Repti-Romance</h1>
           
-          <img src="https://media.giphy.com/media/ejJgnxKlKVe5ucRPtC/giphy.gif"/>
+          <img className="loginIMG" src="https://media.giphy.com/media/ejJgnxKlKVe5ucRPtC/giphy.gif"/>
           
           <div className="login-content">
           <h2 className="signinTxt">Sign in to get slitherin'~</h2>

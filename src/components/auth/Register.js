@@ -57,84 +57,98 @@ export const Register = props => {
     <main className="container--register" style={{ textAlign: "left" }}>
       <dialog className="dialog dialog--password" ref={conflictDialog}>
         <div>Account with that email address already exists</div>
-        <button
+        <Button
           className="button--close"
           onClick={e => conflictDialog.current.close()}
         >
           Close
-        </button>
+        </Button>
       </dialog>
       
       <Form className="form--login" onSubmit={handleRegister}>
+        <div className="register-form-align">
         <h1 className="form-register-txt">
           Join now!
         </h1>
-          <Form.Group>
+          <Form.Group><Form.Field>
+          <div className="registerLabel">Create a Username</div>
+
           <input
-            label="Create a Username"
+            
             ref={username}
             type="text"
             name="username"
-            width={8}
+            width={5}
             className="form-control"
             placeholder="Username"
             required
             autoFocus
-          />
-          <input
-            label="Email Address"
-            ref={email}
-            width={8}
-            type="email"
-            name="email"
-            className="form-control"
-            placeholder="Email address"
-            required
-          /></Form.Group>
-      
-          <input
+          /></Form.Field>
+          <Form.Field>
+
+          <div className="registerLabel">Species</div>
+            <input
             ref={species}
-            label="Species"
-            type="species"
+            width={5}
+            type="text"
             name="species"
             className="form-control"
             placeholder="Species"
             required
           />
           
-          <input
+          </Form.Field></Form.Group>
+      
+      <Form.Field>
+
+      <div className="registerLabel">Email Address</div>
+<input
+            
+            ref={email}
+            width={16}
+            type="text"
+            name="email"
+            className="form-control"
+            placeholder="Email address"
+            required/>
+      </Form.Field>
+          <div className="registerLabel">I'm looking for...</div>
+
+          <Form.Field><input
             ref={lookingFor}
-            label="I'm looking for..."
-            type="lookingFor"
+            width={8}
+            type="text"
             name="lookingFor"
             className="form-control"
             placeholder="Lookin' for"
             required
-          />
+          /></Form.Field>
           
-          <input
+          <div className="registerLabel"> Here's my best angle</div>
+          <Form.Field><input
             ref={photo}
-            label="Here's my best angle"
-            type="photo"
+            type="text"
             name="photo"
             className="form-control"
             placeholder="A photo of me"
             required
-          />
+          /></Form.Field>
         
         
-          <input
+        <Form.Field>
+        <div className="registerLabel">Bio</div>
+        <input
             label="Bio"
             ref={bio}
-            type="bio"
+            type="text"
             name="bio"
             className="form-control"
             placeholder="A little about me."
             required
-          />
+          /></Form.Field>
         
           <Button type="submit"> Create Account </Button>
-        
+          </div>
       </Form>
     </main>
     
