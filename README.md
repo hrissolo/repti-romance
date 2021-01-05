@@ -1,6 +1,6 @@
 # Hi! Thanks for checking out my app, Repti-Romance.
-\ You can clone this repo to your local & then -
-\ ### `npm install`
+<br/> You can clone this repo to your local & then -
+<br/> ### `npm install`
 
 \ This project was bootstrapped with [Create React App]
 \ ### `npm start`
