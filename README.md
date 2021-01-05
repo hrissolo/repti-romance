@@ -1,15 +1,15 @@
 # Hi! Thanks for checking out my app, Repti-Romance. <br/>
 You can clone this repo to your local & then - <br/>
 ### `npm install`
-<br/><br/>
+<br/>
 This project was bootstrapped with [Create React App] <br/>
 ### `npm start`
-<br/><br/>
+<br/>
 Technology + skills used: <br/>
 React <br/>
-json server <br/>
-local api <br/>
-javascript <br/>
+Json server <br/>
+Local API <br/>
+Javascript <br/>
 HTML/CSS <br/><br/>
 
 ### `ERD`
