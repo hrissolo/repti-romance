@@ -1,16 +1,16 @@
-* Hi! Thanks for checking out my app, Repti-Romance.
-* You can clone this repo to your local & then -
-* ### `npm install`
+# Hi! Thanks for checking out my app, Repti-Romance.
+\ You can clone this repo to your local & then -
+\ ### `npm install`
 
-* This project was bootstrapped with [Create React App]
-* ### `npm start`
+\ This project was bootstrapped with [Create React App]
+\ ### `npm start`
 
-* Technology + skills used: 
-* React
-* json server
-* local api
-* javascript
-* HTML/CSS
+\Technology + skills used: 
+\React
+\json server
+\local api
+\javascript
+\HTML/CSS
 
 ### `ERD`
 ![Repti-ERD](/readme/repti-ERD.png)
