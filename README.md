@@ -1,9 +1,11 @@
 ## Hi! Thanks for checking out my app, Repti-Romance. <br/>
-You can clone this repo to your local & then - <br/>
+First, clone this repo, - <br/>
 ### `npm install`
 <br/><br/>
 This project was bootstrapped with [Create React App] <br/>
 ### `npm start`
+<br/><br/>
+Don't forget to [cd repti-api] to launch a separate bash window & run: json-server -w database.json -p 8088 
 <br/><br/>
 Technology + skills used: <br/>
 React <br/>
