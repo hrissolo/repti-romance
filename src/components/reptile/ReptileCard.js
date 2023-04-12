@@ -30,9 +30,10 @@ export const ReptileCard = ( {reptiles} ) => {
     //button for scroll bar jumping 
     const button = document.querySelector('.container');
     const scrollWin = () => {
-    let x = button.scrollLeft
-    x=x+390   
-    button.scroll(x,0)}
+        let x = button.scrollLeft
+        x=x+390   
+        button.scroll(x,0)
+    }
 
 
 
