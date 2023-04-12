@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import { ReptileContext } from "./ReptileProvider"
 import { useParams, useHistory } from "react-router-dom"
-import { Image, Icon, Card, Button } from "semantic-ui-react"
-import { ReptileList } from "./ReptileList"
+import { Icon, Card, Button } from "semantic-ui-react"
 import Magnifier from "react-magnifier";
 import "./Reptile.css"
 

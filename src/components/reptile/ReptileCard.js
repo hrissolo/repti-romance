@@ -1,10 +1,9 @@
 import React, { useContext } from "react"
 import { Link } from "react-router-dom"
-import { Card, Icon, Image, Button } from 'semantic-ui-react'
+import { Card, Button } from 'semantic-ui-react'
 import { MatchContext } from "../matches/MatchProvider"
 import { ReptileContext } from "./ReptileProvider"
 import Magnifier from "react-magnifier";
-import Notifications, {notify} from 'react-notify-toast';
 import "./Reptile.css"
 
 
